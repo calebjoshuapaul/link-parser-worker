@@ -1,6 +1,6 @@
 name = "link-parser-worker"
 type = "javascript"
-route = 'www.mapmyquest.net'
+route = 'api.mapmyquest.net'
 zone_id = 'e4bf0f26e47f59ee8d9e7c8449145188'
 account_id = 'ebf1ae44399e99454f38475e6dc95c77'
 workers_dev = true
