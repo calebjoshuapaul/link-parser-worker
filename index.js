@@ -5,15 +5,17 @@ addEventListener("fetch", (event) => {
 async function handleRequest(request) {
   const reqUrl = new URL(request.url);
   const url = reqUrl.searchParams.get("url");
-
-  let response = await fetch(url);
+  console.log(url);
+  let response = await fetch("https://" + url);
   response = new Response(response.body, response);
 
   let text = await response.text();
 
+  console.log(text);
+
   let re = /href=\"(http.*?)\"/gm;
 
-  let linksFound = fetchedHtmlResults.matchAll(re);
+  let linksFound = text.matchAll(re);
   let links = [];
   for (let link of linksFound) {
     links.push(link[1]);
