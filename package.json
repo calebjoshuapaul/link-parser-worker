@@ -1,0 +1,17 @@
+{
+  "name": "link-parser-worker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calebjoshuapaul/link-parser-worker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/calebjoshuapaul/link-parser-worker/issues"
+  },
+  "homepage": "https://github.com/calebjoshuapaul/link-parser-worker#readme"
+}
