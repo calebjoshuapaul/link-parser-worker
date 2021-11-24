@@ -4,9 +4,13 @@ addEventListener("fetch", (event) => {
 
 async function handleRequest(request) {
   const reqUrl = new URL(request.url);
-  const url = reqUrl.searchParams.get("url");
+  let url = reqUrl.searchParams.get("url");
   console.log(url);
-  let response = await fetch("https://" + url);
+
+  request = new Request(url, request);
+  request.headers.set("Origin", new URL(url).origin);
+
+  let response = await fetch(request);
   response = new Response(response.body, response);
 
   let text = await response.text();
@@ -26,6 +30,8 @@ async function handleRequest(request) {
   return new Response(result, {
     headers: {
       "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": reqUrl.origin,
+      Vary: "Origin",
     },
   });
 }
