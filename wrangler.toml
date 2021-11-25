@@ -1,6 +1,6 @@
 name = "link-parser-worker"
 type = "javascript"
-route = 'https://link-parser-worker.calebjoshuapaul.workers.dev/*'
+route = 'api.link-parser-worker.calebjoshuapaul.workers.dev/*'
 zone_id = ''
 account_id = 'ebf1ae44399e99454f38475e6dc95c77'
 workers_dev = true
