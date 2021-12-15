@@ -7,9 +7,6 @@ async function handleRequest(request) {
   let url = reqUrl.searchParams.get("url");
 
   request = new Request(url, request);
-  request.headers.set("Origin", new URL(url).origin);
-  console.log(reqUrl.origin);
-
   let response = await fetch(request);
   response = new Response(response.body, response);
 
